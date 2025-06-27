@@ -1,5 +1,6 @@
 "use client";
 import React from 'react'
+import { PlusCircleIcon,CogIcon, MagnifyingGlassCircleIcon, UserCircleIcon, BellAlertIcon } from '@heroicons/react/24/outline'
 import Layout from "@/app/components/slideLayout"
 import {
   BarChart,
@@ -34,9 +35,23 @@ const COLORS = ["#3b82f6", "#e5e7eb"];
 const Dashboard = () => {
   return (
    <Layout>
-     
+    <div className="flex justify-between items-center p-4">
       <h1 className='font-bold text-2xl'>Dashboard</h1>
-      <section className='ml-auto p-2'>
+            <div className="flex gap-3">             
+              <button className='bg-blue-200 text-white hover:bg-blue-600 p-2 rounded-lg'>
+                <MagnifyingGlassCircleIcon className='h-5 w-5' />
+              </button>
+              <button className='bg-blue-200 text-white hover:bg-blue-600 p-2 rounded-lg'>
+              <CogIcon className='h-6 w-6 text-gray-600' />  
+              </button>
+              <button className='bg-blue-200 text-white hover:bg-blue-600 p-2 rounded-lg'>
+              <BellAlertIcon className='h-6 w-6 text-gray-600' />      
+              </button>
+              <UserCircleIcon className='h-10 w-10 text-gray-600' />
+        </div>
+    </div>
+     
+      <section className='ml-auto p-2 -mt-4'>
       <div className="cards flex flex-wrap gap-4 mt-4 ">
         <div className="card  text-black p-6  rounded-lg shadow-md w-60">
           <h2 className='text-xl'> Products</h2>
@@ -107,12 +122,12 @@ const Dashboard = () => {
       </div>
      </section>
 
-     <section className='diagramme  mt-10 '>
+     <section className='diagramme  mt-5'>
       <div className="flex space-x-4">
-        <div className="en-bâton">
+        <div className="en-bâton ">
         <div className="w-[900px] h-[400px] bg-white p-4 rounded shadow">
       <h2 className="text-sm mb-4 ">Visites par mois</h2>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="90%">
         <BarChart data={data}>
           <XAxis dataKey="mois" />
           <YAxis />
