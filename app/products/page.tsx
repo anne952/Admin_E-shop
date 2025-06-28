@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { use } from 'react'
 import Layout from '../components/slideLayout'
 import { PlusCircleIcon} from '@heroicons/react/24/outline'
 import ProductsCard from '../components/cards-products'
+import Link from 'next/link'
 
 
-const products = () => {
+export default function products(){
+   
   return (
   <Layout>
       <div className='flex justify-between items-center p-4'>
         <h1 className='font-bold text-2xl'>Les Products</h1>
-        <button className='bg-blue-200 text-white hover:bg-blue-600 p-2 rounded-lg'>
+        <Link href="/addProducts" className='bg-blue-200 text-white hover:bg-blue-600 p-2 rounded-lg'>
                 <PlusCircleIcon className='h-5 w-5' />
-        </button>
+        </Link>
         
       </div>
       <section>
@@ -35,4 +37,3 @@ const products = () => {
   )
 }
 
-export default products

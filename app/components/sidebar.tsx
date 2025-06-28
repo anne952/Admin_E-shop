@@ -16,7 +16,7 @@ function sidenav() {
           <div className="border-white border mt-4"></div>
 
           <div className="flex flex-col mt-10 space-y-8">
-            <Link href="/" className="flex gap-2 p-2 hover:bg-blue-600 rounded hover:text-white">
+            <Link href="/dashboard" className="flex gap-2 p-2 hover:bg-blue-600 rounded hover:text-white">
               <Square2StackIcon className="h-5 w-5 " /> Dashboard
             </Link>
 
@@ -24,7 +24,7 @@ function sidenav() {
               <ShoppingCartIcon className="h-5 w-5 " /> Products
             </Link>
             
-             <Link href="#" className="flex gap-2 p-2 hover:bg-blue-600 rounded hover:text-white">
+             <Link href="/orders" className="flex gap-2 p-2 hover:bg-blue-600 rounded hover:text-white">
               <FunnelIcon className="h-5 w-5 " /> Orders
             </Link>
             
