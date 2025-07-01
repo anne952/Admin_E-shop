@@ -39,7 +39,7 @@ function sidenav() {
       </div>
         </div> 
 
-        <Link href="#" className="flex  ml-6 mt-60">
+        <Link href="/" className="flex  ml-6 mt-60">
             <div className="rounded-full p-2 bg-blue-400 hover:bg-blue-600 text-white">
               <ArrowLeftEndOnRectangleIcon className="h-5 w-5 " />
             </div>
